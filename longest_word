@@ -1,0 +1,20 @@
+"""
+Finding the longest word in a string
+"""
+string = 'nome sobrenome palavrinhas novelamexicanamuitogrande'
+interm = 0
+words = string.split(' ')
+list = []
+
+
+for i in range(0, len(words)):
+    list.append(len(words[i]))
+
+max_word = max(list)
+ind = list.index(max_word)
+longest_word = words[ind]
+
+print longest_word
+
+
+
