@@ -1,0 +1,27 @@
+alpha = 'abcdefghijklmnopqrstuvwxyz'
+string = 'where is my number'
+num = 0
+control = 1
+new_string = []
+
+
+# comparing and changing letters from string
+for i in range(0, len(string)):
+    num = alpha.find(string[i])
+    print(num)
+    control = control + num
+    if control == 26:
+        control = 1
+        new_string.append(alpha[control])
+    elif control == -1:
+        new_string.append(' ')
+    else:
+        control = 1 + num
+        if alpha[control] == 'a' or alpha[control] == 'e' or alpha[control] == 'i' or alpha[control] == 'o' or alpha[control] == 'u':
+            new_string.append(alpha[control].upper())
+        elif alpha[control] == ',':
+            new_string.append('')
+        else:
+            new_string.append(alpha[control])
+
+print(str(new_string))
